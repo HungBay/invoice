@@ -1,0 +1,36 @@
+﻿@model invoice.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MOTA_SP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MOTA_SP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GIA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GIA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SOLUONG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SOLUONG)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID_SP">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

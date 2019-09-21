@@ -1,0 +1,42 @@
+﻿@model invoice.Models.Invoice_details
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Invoice_details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SOLUONG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SOLUONG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.THANHTIEN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.THANHTIEN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Invoices)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Invoices.ID_HOADON)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Products)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Products.MOTA_SP)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID_CTHD">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

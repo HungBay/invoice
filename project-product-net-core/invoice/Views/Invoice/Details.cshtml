@@ -1,0 +1,30 @@
+﻿@model invoice.Models.Invoice
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Invoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAYBAN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NGAYBAN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customers)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customers.DIA_CHI_KHACH_HANG)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID_HOADON">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
