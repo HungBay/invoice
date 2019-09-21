@@ -1,0 +1,28 @@
+﻿@model Product
+
+@{ 
+    ViewBag.Title = "Details";
+}
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.MOTA_SP</h1>
+            </div>
+            <div class="card-body text-center">
+                <img class="card-img-top" src="~/images/Hinata.jpg" />
+                <h4>ID: @Model.ID_SP</h4>
+                <h4>Gia: @Model.GIA</h4>
+                <h4>So luong: @Model.SOLUONG</h4>
+            </div>
+            <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">View</a>
+                <a href="#" class="btn btn-info">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/JavaScript.js"></script>
+}

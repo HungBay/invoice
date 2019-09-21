@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card-deck">
+    @foreach (var product in Model)
+    {
+        <div class="card md-3">
+            <div class="card-header">
+                <h3>@product.MOTA_SP</h3>
+            </div>
+            <img class="card-img-top"src="~/images/Hinata.jpg" asp-append-version="true"/>
+        <div class="card-footer text-center">
+            @*<a asp-controller="home" asp-action="details" asp-route-id="@product.ID_SP" class="btn btn-primary">Share</a>
+            <a href="@Url.Action("details","home", new { id = product.ID_SP})" class="btn btn-primary">View</a>
+            @Html.ActionLink("View","details","home", new { id = product.ID_SP })*@
+            <a asp-controller="home" asp-action="details" asp-route-id="@product.ID_SP" class="btn btn-primary">View</a>
+            <a href="#" class="btn btn-info">Edit</a>
+            <a href="#" class="btn btn-danger">Delete</a>
+        </div>
+        </div>
+    }
+</div>
