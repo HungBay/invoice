@@ -42,6 +42,7 @@ namespace invoice
             services.AddTransient<IInvoice_details, Invoice_detailsRepository>();
             services.AddTransient<IInvoice, InvoiceRepository>();
             services.AddTransient<ICustomer, CustomerRepository>();
+            services.AddTransient<IInvoiceCustomer, InvoiceCustomerRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

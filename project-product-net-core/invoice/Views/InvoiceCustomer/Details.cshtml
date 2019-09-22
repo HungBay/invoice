@@ -1,0 +1,73 @@
+﻿@model invoice.Models.viewModel.InvoiceView
+
+
+@{
+    ViewBag.Title = "Details invoice customer";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Invoice_details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_SP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ID_SP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MOTA_SP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MOTA_SP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GIA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GIA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SOLUONG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SOLUONG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_KHACHHANG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ID_KHACHHANG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DIA_CHI_KHACH_HANG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DIA_CHI_KHACH_HANG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TEN_KHACH_HANG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TEN_KHACH_HANG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_HOADON)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ID_HOADON)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAYBAN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NGAYBAN)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
