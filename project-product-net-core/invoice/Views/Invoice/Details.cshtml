@@ -1,4 +1,4 @@
-﻿@model invoice.Models.Invoice
+﻿@model Invoice
 
 @{
     ViewData["Title"] = "Details";
@@ -17,7 +17,14 @@
             @Html.DisplayFor(model => model.NGAYBAN)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Customers)
+            @Html.DisplayNameFor(model => model.Customers.TEN_KHACH_HANG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customers.TEN_KHACH_HANG)
+        </dd>
+        <dt>
+            <label asp-for="@Model.Customers.DIA_CHI_KHACH_HANG"></label>
+            @Html.DisplayNameFor(model => model.Customers.DIA_CHI_KHACH_HANG)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Customers.DIA_CHI_KHACH_HANG)

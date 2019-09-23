@@ -104,3 +104,5 @@ E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netc
 E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.csproj.CopyComplete
 E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceCustomer\Index.g.cshtml.cs
 E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceCustomer\Details.g.cshtml.cs
+E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.Properties.Resources.resources
+E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.csproj.GenerateResource.cache

@@ -6,7 +6,6 @@
 
 <h2>Index</h2>
 
-
 <table class="table">
     <thead>
         <tr>
@@ -65,9 +64,9 @@
                 @Html.DisplayFor(modelItem => item.NGAYBAN)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID_SP">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID_SP">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID_SP">Delete</a>
+                @*<a asp-action="Edit" asp-route-id="@item.ID_SP">Edit</a> |*@
+                <a asp-action="Details" asp-route-id="@item.ID_SP">Details</a>
+                @*<a asp-action="Delete" asp-route-id="@item.ID_SP">Delete</a>*@
             </td>
         </tr>
 }

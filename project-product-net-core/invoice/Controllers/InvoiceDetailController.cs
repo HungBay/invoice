@@ -52,7 +52,9 @@ namespace invoice.Controllers
         {
             if (Id != null)
             {
-                return View(_InvoiceDetail.GetInvoice_Detail(Id));
+                Invoice_details model = _InvoiceDetail.GetInvoice_Detail(Id??1);
+               
+                return View(model);
             }
             else
             {
