@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Product>
+
+@{ 
+    ViewBag.Title = "List Product";
+
+}
+<div class="col-md-12">
+    <div class="row">
+        <a asp-action="Create" class="btn btn-primary mb-3">Create</a>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.MOTA_SP)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.GIA)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.SOLUONG)
+                    </th>
+                    <th scope="col" class="text-center">
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @{
+                    int num = 0;
+                    foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MOTA_SP)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.GIA)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SOLUONG)
+                            </td>
+                            <td class="text-center">
+                                <a asp-action="Edit" asp-route-id="@item.ID_SP" class="btn btn-info">Edit</a> 
+                                <a asp-action="Details" asp-route-id="@item.ID_SP" class="btn btn-info">Details</a>
+                                <a asp-action="Delete" asp-route-id="@item.ID_SP" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

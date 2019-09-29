@@ -1,0 +1,49 @@
+﻿@model Product
+
+@{
+    ViewBag.Title = "Delete Product";
+
+}
+<div class="col-md-12">
+    <div class="row">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.MOTA_SP)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.GIA)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.SOLUONG)
+                    </th>
+                    <th scope="col" class="text-center">
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(model => model.MOTA_SP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.GIA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.SOLUONG)
+                    </td>
+                    <td class="text-center">
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="ID_SP" />
+                            <input type="submit" value="Delete" class="btn btn-danger" /> 
+                            <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

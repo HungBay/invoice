@@ -1,0 +1,46 @@
+﻿@model Product
+
+@{
+    ViewBag.Title = "Detail Product";
+
+}
+<div class="col-md-12">
+    <div class="row">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.MOTA_SP)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.GIA)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.SOLUONG)
+                    </th>
+                    <th scope="col" class="text-center">
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(model => model.MOTA_SP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.GIA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.SOLUONG)
+                    </td>
+                    <td class="text-center">
+                        <a asp-action="Edit" asp-route-id="@Model.ID_SP" class="btn btn-info">Edit</a>
+                        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
