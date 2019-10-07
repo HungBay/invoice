@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Anglar 5\\FirebaseDemo\\invoice\\project-product-net-core\\invoice\\invoice.csproj": {}
+    "E:\\Mon hoc\\Chuyen de 1\\project-product-net-core\\invoice\\invoice.csproj": {}
   },
   "projects": {
-    "E:\\Anglar 5\\FirebaseDemo\\invoice\\project-product-net-core\\invoice\\invoice.csproj": {
+    "E:\\Mon hoc\\Chuyen de 1\\project-product-net-core\\invoice\\invoice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Anglar 5\\FirebaseDemo\\invoice\\project-product-net-core\\invoice\\invoice.csproj",
+        "projectUniqueName": "E:\\Mon hoc\\Chuyen de 1\\project-product-net-core\\invoice\\invoice.csproj",
         "projectName": "invoice",
-        "projectPath": "E:\\Anglar 5\\FirebaseDemo\\invoice\\project-product-net-core\\invoice\\invoice.csproj",
+        "projectPath": "E:\\Mon hoc\\Chuyen de 1\\project-product-net-core\\invoice\\invoice.csproj",
         "packagesPath": "C:\\Users\\Hung 7\\.nuget\\packages\\",
-        "outputPath": "E:\\Anglar 5\\FirebaseDemo\\invoice\\project-product-net-core\\invoice\\obj\\",
+        "outputPath": "E:\\Mon hoc\\Chuyen de 1\\project-product-net-core\\invoice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -83,6 +83,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.1.9, )"
+            },
+            "Rotativa.AspNetCore": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "Syncfusion.HtmlToPdfConverter.QtWebKit.Net.Core": {
+              "target": "Package",
+              "version": "[17.2.0.34, )"
             }
           },
           "imports": [

@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using invoice.Models.viewModel;
-
 namespace invoice.Repository
 {
     public class DB_Context : DbContext
@@ -23,6 +22,6 @@ namespace invoice.Repository
 
         public DbSet<Customer> Customers { get; set; }
 
-        public DbSet<invoice.Models.viewModel.InvoiceView> InvoiceView { get; set; }
+        //public DbSet<invoiceView> invoiceViews { get; set; }
     }
 }

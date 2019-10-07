@@ -22,7 +22,6 @@ namespace invoice.Models
         [Required]
         public int SOLUONG { get; set; }
         [Required]
-        [DisplayName("Thành tiền")]
         public double THANHTIEN { get; set; }
 
         public Invoice Invoices { get; set; }

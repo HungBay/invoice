@@ -12,13 +12,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Rotativa.AspNetCore;
 
 namespace invoice
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
+            var builder = new ConfigurationBuilder().
+                            SetBasePath(env.ContentRootPath).
+                            AddJsonFile("appsettings.json", false, true).
+                            AddEnvironmentVariables();
+            configuration = builder.Build();
             Configuration = configuration;
         }
 
@@ -42,7 +48,7 @@ namespace invoice
             services.AddTransient<IInvoice_details, Invoice_detailsRepository>();
             services.AddTransient<IInvoice, InvoiceRepository>();
             services.AddTransient<ICustomer, CustomerRepository>();
-            services.AddTransient<IInvoiceCustomer, InvoiceCustomerRepository>();
+            services.AddTransient<IInvoiceList, InvoiceListRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +56,7 @@ namespace invoice
         {
             if (env.IsDevelopment())
             {
+                
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -68,6 +75,7 @@ namespace invoice
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            RotativaConfiguration.Setup(env, "..\\Rotativa\\");
         }
     }
 }

@@ -50,59 +50,56 @@ E:\Môn học\Chuyên đề 1\project-product-net-core\invoice\obj\Debug\netcore
 E:\Môn học\Chuyên đề 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Edit.g.cshtml.cs
 E:\Môn học\Chuyên đề 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Delete.g.cshtml.cs
 E:\Môn học\Chuyên đề 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.csprojAssemblyReference.cache
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.deps.json
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.runtimeconfig.json
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.runtimeconfig.dev.json
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.dll
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.pdb
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.Views.dll
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.Views.pdb
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.csprojAssemblyReference.cache
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.csproj.CoreCompileInputs.cache
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.RazorAssemblyInfo.cache
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.RazorAssemblyInfo.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.AssemblyInfoInputs.cache
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.AssemblyInfo.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.TagHelpers.input.cache
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.TagHelpers.output.cache
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.RazorCoreGenerate.cache
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Create.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Delete.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Details.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Edit.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Index.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Create.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Delete.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Details.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Edit.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Index.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Invoice\Create.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Invoice\Delete.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Invoice\Details.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Invoice\Edit.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Invoice\Index.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Product\Create.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Product\Delete.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Product\Details.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Product\Edit.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Product\Index.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.RazorTargetAssemblyInfo.cache
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.RazorTargetAssemblyInfo.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.Views.pdb
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.dll
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.pdb
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.csproj.CopyComplete
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceCustomer\Index.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceCustomer\Details.g.cshtml.cs
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.Properties.Resources.resources
-E:\Anglar 5\FirebaseDemo\invoice\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.csproj.GenerateResource.cache
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.deps.json
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.runtimeconfig.json
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.runtimeconfig.dev.json
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.dll
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.pdb
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.Views.dll
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\bin\Debug\netcoreapp2.1\invoice.Views.pdb
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.csprojAssemblyReference.cache
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.csproj.CoreCompileInputs.cache
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.RazorAssemblyInfo.cache
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.RazorAssemblyInfo.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.AssemblyInfoInputs.cache
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.AssemblyInfo.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.TagHelpers.input.cache
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.TagHelpers.output.cache
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.RazorCoreGenerate.cache
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Create.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Delete.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Details.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Edit.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Index.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Create.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Delete.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Details.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Edit.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\InvoiceDetail\Index.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Invoice\Create.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Invoice\Delete.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Invoice\Details.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Invoice\Edit.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Invoice\Index.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Product\Create.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Product\Delete.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Product\Details.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Product\Edit.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Product\Index.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.RazorTargetAssemblyInfo.cache
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.RazorTargetAssemblyInfo.cs
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.Views.pdb
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.dll
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.pdb
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\invoice.csproj.CopyComplete
+E:\Mon hoc\Chuyen de 1\project-product-net-core\invoice\obj\Debug\netcoreapp2.1\Razor\Views\Home\Details.g.cshtml.cs
