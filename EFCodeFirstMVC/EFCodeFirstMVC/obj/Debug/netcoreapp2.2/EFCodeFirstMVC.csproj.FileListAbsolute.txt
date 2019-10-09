@@ -1,0 +1,14 @@
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\bin\Debug\netcoreapp2.2\EFCodeFirstMVC.deps.json
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\bin\Debug\netcoreapp2.2\EFCodeFirstMVC.runtimeconfig.json
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\bin\Debug\netcoreapp2.2\EFCodeFirstMVC.runtimeconfig.dev.json
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\bin\Debug\netcoreapp2.2\EFCodeFirstMVC.dll
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\obj\Debug\netcoreapp2.2\EFCodeFirstMVC.csproj.CoreCompileInputs.cache
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\obj\Debug\netcoreapp2.2\EFCodeFirstMVC.RazorAssemblyInfo.cache
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\obj\Debug\netcoreapp2.2\EFCodeFirstMVC.RazorAssemblyInfo.cs
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\obj\Debug\netcoreapp2.2\EFCodeFirstMVC.AssemblyInfoInputs.cache
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\obj\Debug\netcoreapp2.2\EFCodeFirstMVC.AssemblyInfo.cs
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\obj\Debug\netcoreapp2.2\EFCodeFirstMVC.RazorTargetAssemblyInfo.cache
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\obj\Debug\netcoreapp2.2\EFCodeFirstMVC.csprojAssemblyReference.cache
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\bin\Debug\netcoreapp2.2\EFCodeFirstMVC.pdb
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\obj\Debug\netcoreapp2.2\EFCodeFirstMVC.dll
+E:\Anglar 5\FirebaseDemo\invoice\EFCodeFirstMVC\EFCodeFirstMVC\obj\Debug\netcoreapp2.2\EFCodeFirstMVC.pdb
