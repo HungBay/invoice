@@ -44,8 +44,6 @@ namespace SaleOfPastries.Migrations
                     b.HasIndex("CustomerId");
 
                     b.ToTable("Bills");
-                    
-                    
                 });
 
             modelBuilder.Entity("SaleOfPastries.Models.BillDetail", b =>
@@ -82,7 +80,8 @@ namespace SaleOfPastries.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Address")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasMaxLength(200);
 
                     b.Property<DateTime>("CreatedAt");
 
@@ -193,6 +192,8 @@ namespace SaleOfPastries.Migrations
                         .IsRequired()
                         .HasMaxLength(200);
 
+                    b.Property<string>("Image");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50);
@@ -204,7 +205,6 @@ namespace SaleOfPastries.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TypeProducts");
-
                 });
 
             modelBuilder.Entity("SaleOfPastries.Models.User", b =>

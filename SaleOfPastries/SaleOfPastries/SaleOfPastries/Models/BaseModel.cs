@@ -21,6 +21,7 @@ namespace SaleOfPastries.Models
         [DataType(DataType.DateTime)]
         public DateTime CreatedAt { get; set; }
 
+        
         [DataType(DataType.DateTime)]
         public DateTime UpdatedAt { get; set; }
 

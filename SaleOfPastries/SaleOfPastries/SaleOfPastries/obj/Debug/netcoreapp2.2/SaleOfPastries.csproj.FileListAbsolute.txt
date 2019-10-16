@@ -20,5 +20,13 @@ G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\ne
 G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\SaleOfPastries.RazorTargetAssemblyInfo.cs
 G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\SaleOfPastries.Views.pdb
 G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\SaleOfPastries.csproj.CopyComplete
-G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\SaleOfPastries.csprojAssemblyReference.cache
 G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Shared\_Layout.g.cshtml.cs
+G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewImports.g.cshtml.cs
+G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.g.cshtml.cs
+G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\User\Create.g.cshtml.cs
+G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\User\Index.g.cshtml.cs
+G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\SaleOfPastries.csprojAssemblyReference.cache
+G:\Mon hoc\Chuyen de 1\SaleOfPastries\SaleOfPastries\SaleOfPastries\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\User\Edit.g.cshtml.cs

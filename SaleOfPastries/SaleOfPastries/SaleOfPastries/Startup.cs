@@ -9,6 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using SaleOfPastries.Repositories;
+using SaleOfPastries.Services;
+using SaleOfPastries.Areas.Admin.Serivice;
+using SaleOfPastries.Areas.Admin.Reponsitory;
 
 namespace SaleOfPastries
 {
@@ -26,6 +29,9 @@ namespace SaleOfPastries
         {
             services.AddMvc();
             services.AddDbContext<SaleOfPastriesDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connect")));
+            services.AddTransient<IProduct, ProductRepository>();
+
+            services.AddTransient<IUser, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

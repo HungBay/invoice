@@ -12080,23 +12080,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hung 7\\.nuget\\packages\\": {},
+    "C:\\Users\\Hung Bay\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Mon hoc\\Chuyen de 1\\codeFirst\\CodeFirst\\CodeFirst.csproj",
+      "projectUniqueName": "G:\\Anglar 5\\FirebaseDemo\\invoice\\codeFirst\\CodeFirst\\CodeFirst.csproj",
       "projectName": "CodeFirst",
-      "projectPath": "E:\\Mon hoc\\Chuyen de 1\\codeFirst\\CodeFirst\\CodeFirst.csproj",
-      "packagesPath": "C:\\Users\\Hung 7\\.nuget\\packages\\",
-      "outputPath": "E:\\Mon hoc\\Chuyen de 1\\codeFirst\\CodeFirst\\obj\\",
+      "projectPath": "G:\\Anglar 5\\FirebaseDemo\\invoice\\codeFirst\\CodeFirst\\CodeFirst.csproj",
+      "packagesPath": "C:\\Users\\Hung Bay\\.nuget\\packages\\",
+      "outputPath": "G:\\Anglar 5\\FirebaseDemo\\invoice\\codeFirst\\CodeFirst\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Hung 7\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hung Bay\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

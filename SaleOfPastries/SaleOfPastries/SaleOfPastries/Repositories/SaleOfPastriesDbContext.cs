@@ -21,6 +21,5 @@ namespace SaleOfPastries.Repositories
         public DbSet<NewProduct> NewProducts { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<BillDetail> BillDetails { get; set; }
-
     }
 }

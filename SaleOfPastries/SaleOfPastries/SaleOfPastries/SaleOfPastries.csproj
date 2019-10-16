@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\bower_components\**" />
+    <Content Remove="wwwroot\bower_components\**" />
+    <EmbeddedResource Remove="wwwroot\bower_components\**" />
+    <None Remove="wwwroot\bower_components\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Migrations\20191012064232_initialCreateDbSaleOfPastries.cs" />
     <Compile Remove="Migrations\20191012064232_initialCreateDbSaleOfPastries.Designer.cs" />
   </ItemGroup>
@@ -20,12 +27,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Admin\Serivice\" />
-    <Folder Include="Areas\Admin\Reponsitory\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

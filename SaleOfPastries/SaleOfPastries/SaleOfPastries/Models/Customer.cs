@@ -21,7 +21,7 @@ namespace SaleOfPastries.Models
         public string Email { get; set; }
 
         [Required]
-        [StringLength(0)]
+        [StringLength(200)]
         public string Address { get; set; }
 
         [Required]
