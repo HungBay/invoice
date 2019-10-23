@@ -1,0 +1,46 @@
+﻿@model Bill
+
+@{
+    ViewBag.Title = "Edit Bill";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">Bill</a>
+    </li>
+    <li class="breadcrumb-item active">Edit</li>
+</ol>
+
+<form asp-action="Edit" asp-controller="Bill" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="CustomerId"></label>
+                @*<input type="text" class="form-control" asp-for="CustomerId" />*@
+                <select class="form-control" asp-for="CustomerId"
+                    asp-items="@(new SelectList(ViewBag.Customers, "Id", "Name"))"></select>
+                <span asp-validation-for="CustomerId" style="color:red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOrder"></label>
+                <input type="text" class="form-control" asp-for="DateOrder" />
+                <span asp-validation-for="DateOrder" style="color:red;"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Total"></label>
+                <input type="text" class="form-control" asp-for="Total" />
+                <span asp-validation-for="Total" style="color:red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Note"></label>
+                @*<input type="text" class="form-control" asp-for="Note" />*@
+                <textarea asp-for="Note" class="form-control" rows="5" cols="5"></textarea>
+                <span asp-validation-for="Note" style="color:red;"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary offset-3">Edit</button>
+    </div>
+</form>
+

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<NewProduct>
+
+@{
+    ViewBag.Title = "Index NewProduct";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a asp-action="Index" asp-area="Admin" asp-controller="NewProduct">NewProduct</a>
+    </li>
+    <li class="breadcrumb-item active">Index</li>
+</ol>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6 p-0">
+            <a class="btn btn-primary text-white mb-1" asp-action="Create" asp-area="Admin" asp-controller="NewProduct">Add +</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Title)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Context)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Image)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.status)</th>
+                    <th class="text-center" colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.Title)</td>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.Context)</td>
+                        <td scope="row">
+                            <img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(modelItem => item.Image)"/>
+                        </td> 
+                        <td scope="row">@Html.DisplayFor(modelItem => item.status)</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

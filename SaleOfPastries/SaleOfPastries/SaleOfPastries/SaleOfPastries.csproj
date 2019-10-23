@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\bower_components\**" />
+    <Content Remove="wwwroot\bower_components\**" />
+    <EmbeddedResource Remove="wwwroot\bower_components\**" />
+    <None Remove="wwwroot\bower_components\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191012064232_initialCreateDbSaleOfPastries.cs" />
+    <Compile Remove="Migrations\20191012064232_initialCreateDbSaleOfPastries.Designer.cs" />
+    <Compile Remove="Migrations\20191017061438_addImgTypeProduct.cs" />
+    <Compile Remove="Migrations\20191017061438_addImgTypeProduct.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\BillDetail\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Bill\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Bill\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Bill\Details.cshtml" />
+    <None Include="Areas\Admin\Views\Bill\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Bill\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Customer\Create.cshtml" />
+    <None Include="Areas\Admin\Views\Customer\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\Customer\Details.cshtml" />
+    <None Include="Areas\Admin\Views\Customer\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\Customer\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <None Include="Areas\Admin\Views\NewProduct\Create.cshtml" />
+    <None Include="Areas\Admin\Views\NewProduct\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\NewProduct\Details.cshtml" />
+    <None Include="Areas\Admin\Views\NewProduct\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\NewProduct\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <None Include="Areas\Admin\Views\TypeProduct\Create.cshtml" />
+    <None Include="Areas\Admin\Views\TypeProduct\Delete.cshtml" />
+    <None Include="Areas\Admin\Views\TypeProduct\Details.cshtml" />
+    <None Include="Areas\Admin\Views\TypeProduct\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\TypeProduct\Index.cshtml" />
+    <None Include="Areas\Admin\Views\_ViewImports.cshtml" />
+    <None Include="Areas\Admin\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+
+</Project>

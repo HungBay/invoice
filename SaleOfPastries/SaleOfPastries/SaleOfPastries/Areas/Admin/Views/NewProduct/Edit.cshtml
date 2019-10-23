@@ -1,0 +1,47 @@
+﻿@model NewProduct
+
+@{
+    ViewBag.Title = "Edit NewProduct";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a asp-action="Index" asp-area="Admin" asp-controller="NewProduct">NewProduct</a>
+    </li>
+    <li class="breadcrumb-item active">Edit</li>
+</ol>
+
+<form asp-action="Edit" asp-controller="NewProduct" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Title"></label>
+                <input type="text" class="form-control" asp-for="Title" />
+                <span asp-validation-for="Title" style="color:red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image"></label>
+                <input type="file" class="form-control" asp-for="Image" />
+                <img class="rounded d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(model => model.Image)" />
+                <span asp-validation-for="Image" style="color:red;"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Context"></label>
+                <input type="text" class="form-control" asp-for="Context" />
+                <span asp-validation-for="Context" style="color:red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="status"></label>
+                <select asp-for="status" class="form-control">
+                    <option value="0">Acive</option>
+                    <option value="1">nonAcive</option>
+                </select>
+                <span asp-validation-for="status" style="color:red;"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary offset-3">Edit</button>
+    </div>
+</form>
+
