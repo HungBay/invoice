@@ -53,8 +53,10 @@
 
                     @for (var p = 1; p <= ViewBag.PageCount; p++)
                     {
-                        <li class="page-item"><a href="@Url.Action("Index", new { page = p })" class="btn btn-default page-link">@p</a></li>   
+                        
+                        <li class="page-item"><a href="@Url.Action("Index", new { page = p, s= ViewBag.Search})" class="btn btn-default page-link">@p</a></li>
                     }
+
                 </ul>
             </nav>
         </div>

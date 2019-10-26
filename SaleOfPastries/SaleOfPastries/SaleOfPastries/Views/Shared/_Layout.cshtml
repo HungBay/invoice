@@ -42,9 +42,10 @@
                     <div class="space10">&nbsp;</div>
                     <div class="beta-comp">
                         <form role="search" method="get" id="searchform" asp-action="Index" asp-controller="Home">
-                            <input type="text" name="s" id="s" placeholder="Nhập từ khóa..." />
+                            <input type="text" name="s" id="s" placeholder="Nhập từ khóa..." onkeypress="Search()"/>
                             <button class="fa fa-search" type="submit" id="searchsubmit"></button>
                         </form>
+                        
                     </div>
                     <div class="beta-comp">
                         <div class="dropdown">

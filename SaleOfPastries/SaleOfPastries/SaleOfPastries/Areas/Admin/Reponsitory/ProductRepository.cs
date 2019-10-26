@@ -68,16 +68,23 @@ namespace SaleOfPastries.Areas.Admin.Reponsitory
 
 
         //view user
-        public IEnumerable<Product> GetProductsPage(int? Page)
+        public IEnumerable<Product> GetProductsPage(int? Page, string s)
         {
             const int PAGE_SIZE = 8;
 
             if (Page == null) Page = 1;
             int skipN = (Page.Value - 1) * PAGE_SIZE;
-
-            var model = db.Products.OrderByDescending(p => p.Id).Skip(skipN).Take(PAGE_SIZE).ToList();
-
-            return model;
+            if (s != null)
+            {
+                var model = db.Products.Where(x =>x.Name.Contains(s)).OrderByDescending(p => p.Id).Skip(skipN).Take(PAGE_SIZE).ToList();
+                return model;
+            }
+            else
+            {
+                var model = db.Products.OrderByDescending(p => p.Id).Skip(skipN).Take(PAGE_SIZE).ToList();
+                return model;
+            }
+            
         }
 
         public IEnumerable<Product> GetProductsRelated(Guid? Id)
@@ -94,7 +101,7 @@ namespace SaleOfPastries.Areas.Admin.Reponsitory
 
         public IEnumerable<Product> GetProductsSearch(string s)
         {
-            var model = db.Products.Where(x => x.Name.Contains(s));
+            var model = db.Products.Where(x => x.Name.Contains(s)).ToList();
             return model;
         }
     }

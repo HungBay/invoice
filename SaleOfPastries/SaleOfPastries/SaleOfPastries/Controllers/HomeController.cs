@@ -54,7 +54,7 @@ namespace SaleOfPastries.Controllers
         {
             //header
             ViewBag.TypeProducts = _TypeProduct.GetTypeProducts;
-            if (_Product.GetProductsPage(Page) == null)
+            if (_Product.GetProductsPage(Page,s) == null)
             {
                 return NotFound();
             }
@@ -65,14 +65,15 @@ namespace SaleOfPastries.Controllers
                     var rowCount = _Product.GetProducts.Count();
                     var pageCount = (double)rowCount / 8;
                     ViewBag.PageCount = (int)Math.Ceiling(pageCount);
-                    return View("Index", _Product.GetProductsPage(Page));
+                    return View("Index", _Product.GetProductsPage(Page, s));
                 }
                 else
                 {
                     var rowCount = _Product.GetProductsSearch(s).Count();
                     var pageCount = (double)rowCount / 8;
                     ViewBag.PageCount = (int)Math.Ceiling(pageCount);
-                    return View("Index", _Product.GetProductsPage(Page));
+                    ViewBag.Search = s;
+                    return View("Index", _Product.GetProductsPage(Page,s));
                 }
             }
 
