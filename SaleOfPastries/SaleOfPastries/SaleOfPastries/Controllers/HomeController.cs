@@ -21,7 +21,7 @@ namespace SaleOfPastries.Controllers
             _TypeProduct = typeProduct;
         }
 
-        
+
         //public IActionResult Index(int? Page)
         //{
         //    //header
@@ -29,24 +29,57 @@ namespace SaleOfPastries.Controllers
 
         //    return View("Index", _Product.GetProducts);
         //}
-        
-        public IActionResult Index(int? Page)
+
+        //[HttpGet]
+        //public IActionResult Index(int? Page)
+        //{
+        //    //header
+        //    ViewBag.TypeProducts = _TypeProduct.GetTypeProducts;
+        //    if(_Product.GetProductsPage(Page) == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    else
+        //    {
+        //        var rowCount = _Product.GetProducts.Count();
+        //        var pageCount = (double)rowCount / 8;
+        //        ViewBag.PageCount = (int)Math.Ceiling(pageCount);
+        //        return View("Index", _Product.GetProductsPage(Page));
+        //    }
+
+        //}
+
+        [HttpGet]
+        public IActionResult Index(int? Page, string s)
         {
             //header
             ViewBag.TypeProducts = _TypeProduct.GetTypeProducts;
-            if(_Product.GetProductsPage(Page) == null)
+            if (_Product.GetProductsPage(Page) == null)
             {
                 return NotFound();
             }
             else
             {
-                var rowCount = _Product.GetProducts.Count();
-                var pageCount = (double)rowCount / 8;
-                ViewBag.PageCount = (int)Math.Ceiling(pageCount);
-                return View("Index", _Product.GetProductsPage(Page));
+                if (s == null)
+                {
+                    var rowCount = _Product.GetProducts.Count();
+                    var pageCount = (double)rowCount / 8;
+                    ViewBag.PageCount = (int)Math.Ceiling(pageCount);
+                    return View("Index", _Product.GetProductsPage(Page));
+                }
+                else
+                {
+                    var rowCount = _Product.GetProductsSearch(s).Count();
+                    var pageCount = (double)rowCount / 8;
+                    ViewBag.PageCount = (int)Math.Ceiling(pageCount);
+                    return View("Index", _Product.GetProductsPage(Page));
+                }
             }
+
             
         }
+
+
         [HttpGet]
         public IActionResult Detail(Guid? Id)
         {

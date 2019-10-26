@@ -91,5 +91,11 @@ namespace SaleOfPastries.Areas.Admin.Reponsitory
             var model = db.Products.Where(x => x.New == Id).ToList();
             return model;
         }
+
+        public IEnumerable<Product> GetProductsSearch(string s)
+        {
+            var model = db.Products.Where(x => x.Name.Contains(s));
+            return model;
+        }
     }
 }

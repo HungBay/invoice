@@ -17,5 +17,6 @@ namespace SaleOfPastries.Areas.Admin.Serivice
         IEnumerable<Product> GetProductsPage(int? Page);
         IEnumerable<Product> GetProductsRelated(Guid? Id);
         IEnumerable<Product> GetProductsNew(int Id);
+        IEnumerable<Product> GetProductsSearch(string s);
     }
 }
