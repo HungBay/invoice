@@ -13,12 +13,15 @@
 
 <form asp-action="Edit" asp-controller="Bill" method="post">
     <div class="row">
+        <input type="hidden" asp-for="Id" />
+    </div>
+    <div class="row">
         <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="CustomerId"></label>
                 @*<input type="text" class="form-control" asp-for="CustomerId" />*@
                 <select class="form-control" asp-for="CustomerId"
-                    asp-items="@(new SelectList(ViewBag.Customers, "Id", "Name"))"></select>
+                        asp-items="@(new SelectList(ViewBag.Customers, "Id", "Name"))"></select>
                 <span asp-validation-for="CustomerId" style="color:red;"></span>
             </div>
             <div class="form-group">

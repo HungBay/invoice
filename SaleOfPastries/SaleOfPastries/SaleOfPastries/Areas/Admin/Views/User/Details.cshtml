@@ -1,0 +1,54 @@
+﻿@model User
+
+@{ 
+    ViewBag.Title = "Details User";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">User</a>
+    </li>
+    <li class="breadcrumb-item active">Details</li>
+</ol>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.FullName)</th>
+                <td scope="row">@Html.DisplayFor(model => model.FullName)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Email)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Email)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Password)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Password)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Phone)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Phone)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Address)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Address)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Image)</th>
+                <td scope="row"><img class="rounded d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(model => model.Image)" /></td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.status)</th>
+                <td scope="row">@Html.DisplayFor(model => model.status)</td>
+            </tr>
+            <tr>
+                <td scope="col">
+                    <form method="post" asp-action="Details" asp-controller="NewProduct">
+                        <button type="submit" class="btn btn-primary offset-3" asp-action="Index">Back</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

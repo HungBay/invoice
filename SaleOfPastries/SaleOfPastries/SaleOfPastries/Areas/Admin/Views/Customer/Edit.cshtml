@@ -1,16 +1,13 @@
 ﻿@model Customer
-
 @{
     ViewBag.Title = "Edit Customer";
 }
-
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
         <a href="#">Customer</a>
     </li>
     <li class="breadcrumb-item active">Edit</li>
 </ol>
-
 <form asp-action="Edit" asp-controller="Customer" method="post">
     <div class="row">
         <input type="hidden" asp-for="Id" />
@@ -45,18 +42,30 @@
                 <span asp-validation-for="Phone" style="color:red;"></span>
             </div>
             <div class="form-group">
+                <label asp-for="status"></label>
+                <select asp-for="status" class="form-control">
+                    <option value="0">Active</option>
+                    <option value="1">noActive</option>
+                </select>
+                <span asp-validation-for="status" style="color: red;"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
                 <label asp-for="Note"></label>
                 <textarea class="form-control" rows="5" cols="5" asp-for="Note"></textarea>
                 <span asp-validation-for="Note" style="color:red;"></span>
             </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary offset-3">Edit</button>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary offset-3">Edit</button>
     </div>
 </form>
-
 <!-- Area Chart Example-->
 <div class="card">
     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
-
 

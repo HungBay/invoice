@@ -13,5 +13,9 @@ namespace SaleOfPastries.Areas.Admin.Serivice
         void Add(Product product);
         void Edit(Guid? Id, Product product);
         void Delete(Guid? Id);
+
+        IEnumerable<Product> GetProductsPage(int? Page);
+        IEnumerable<Product> GetProductsRelated(Guid? Id);
+        IEnumerable<Product> GetProductsNew(int Id);
     }
 }

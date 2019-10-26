@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SaleOfPastries.Areas.Admin.Serivice;
 using SaleOfPastries.Models;
-
+using X.PagedList;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace SaleOfPastries.Areas.Admin.Controllers
@@ -17,22 +17,36 @@ namespace SaleOfPastries.Areas.Admin.Controllers
 
         private readonly ITypeProduct _typeProduct;
 
-        public ProductController(IProduct product, ITypeProduct typeProduct)
+        private readonly INewProduct _newProduct;
+
+        public ProductController(IProduct product, ITypeProduct typeProduct, INewProduct newProduct)
         {
             _product = product;
             _typeProduct = typeProduct;
+            _newProduct = newProduct;
 
         }
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult Index(int? page)
         {
-            return View("Index", _product.GetProducts);
+            //return View("Index", _product.GetProducts);
+            int pageSize = 2;
+            var pageNumber = page ?? 1;
+            ViewBag.products = _product.GetProducts.ToList().ToPagedList(pageNumber, pageSize);
+            return View(ViewBag.products);
+        }
+
+        [HttpGet]
+        public IActionResult Details (Guid? Id)
+        {
+            return View("Details", _product.GetProduct(Id));
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.TypeProductId = _typeProduct.GetTypeProducts;
+            ViewBag.TypeProducts = _typeProduct.GetTypeProducts;
+            ViewBag.NewProducts = _newProduct.GetNewProducts;
             return View();
         }
 
@@ -45,6 +59,40 @@ namespace SaleOfPastries.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(Guid? Id)
+        {
+            try
+            {
+                ViewBag.TypeProducts = _typeProduct.GetTypeProducts;
+                ViewBag.NewProducts = _newProduct.GetNewProducts;
+                return View(_product.GetProduct(Id));
+            }catch(Exception e)
+            {
+                return View("Index", e.Message);
+            }
+        }
+
+        [HttpPost, ActionName("Edit")]
+        public IActionResult EditProduct(Guid? Id, Product model)
+        {
+            _product.Edit(Id, model);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(Guid? Id)
+        {
+            return View("Delete", _product.GetProduct(Id));
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteProduct(Guid? Id)
+        {
+            _product.Delete(Id);
+            return RedirectToAction("Index");
         }
     }
 }

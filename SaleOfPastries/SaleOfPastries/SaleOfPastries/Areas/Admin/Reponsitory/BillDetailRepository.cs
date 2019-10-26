@@ -1,4 +1,5 @@
-﻿using SaleOfPastries.Areas.Admin.Serivice;
+﻿using Microsoft.EntityFrameworkCore;
+using SaleOfPastries.Areas.Admin.Serivice;
 using SaleOfPastries.Models;
 using SaleOfPastries.Repositories;
 using System;
@@ -10,14 +11,13 @@ namespace SaleOfPastries.Areas.Admin.Reponsitory
 {
     public class BillDetailRepository : IBillDetail
     {
-        private readonly SaleOfPastriesDbContext db;
+        private SaleOfPastriesDbContext db;
 
         public BillDetailRepository(SaleOfPastriesDbContext _db)
         {
             db = _db;
         }
-
-        public IEnumerable<BillDetail> GetBillDetails => db.BillDetails;
+        public IEnumerable<BillDetail> GetBillDetails => db.BillDetails.Include(x => x.Bill).Include(y => y.Product);
 
         public void Add(BillDetail billDetail)
         {
@@ -27,17 +27,31 @@ namespace SaleOfPastries.Areas.Admin.Reponsitory
 
         public void Delete(Guid? Id)
         {
-            throw new NotImplementedException();
+            BillDetail model = db.BillDetails.Find(Id);
+            db.BillDetails.Remove(model);
+            db.SaveChanges();
         }
 
         public void Edit(Guid? Id, BillDetail billDetail)
         {
-            throw new NotImplementedException();
+            BillDetail model = db.BillDetails.Find(Id);
+
+            model.BillId = billDetail.BillId;
+            model.ProductId = billDetail.ProductId;
+            model.Quantity = billDetail.Quantity;
+            //model.UnitPrice = billDetail.UnitPrice;
+            model.status = billDetail.status;
+
+            model.UpdatedAt = DateTime.Now;
+
+            db.Entry(model).State = EntityState.Modified;
+            db.SaveChanges();
         }
 
         public BillDetail GetBillDetail(Guid? Id)
         {
-            throw new NotImplementedException();
+            BillDetail model = db.BillDetails.Find(Id);
+            return model;
         }
     }
 }

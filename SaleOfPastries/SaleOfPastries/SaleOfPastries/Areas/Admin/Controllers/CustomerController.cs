@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SaleOfPastries.Areas.Admin.Serivice;
 using SaleOfPastries.Models;
+using X.PagedList;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,9 +21,13 @@ namespace SaleOfPastries.Areas.Admin.Controllers
             _Customer = customer;
         }
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult Index(int? page)
         {
-            return View("Index", _Customer.GetCustomers);
+            //return View("Index", _Customer.GetCustomers);
+            int pageSize = 2;
+            var pageNumber = page ?? 1;
+            ViewBag.typeProducts = _Customer.GetCustomers.ToList().ToPagedList(pageNumber, pageSize);
+            return View(ViewBag.typeProducts);
         }
 
         [HttpGet]

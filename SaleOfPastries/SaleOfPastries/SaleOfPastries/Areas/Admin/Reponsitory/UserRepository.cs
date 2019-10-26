@@ -42,7 +42,16 @@ namespace SaleOfPastries.Areas.Admin.Reponsitory
             user.Password = model.Password;
             user.Phone = model.Phone;
             user.Address = model.Address;
-            
+            user.status = model.status;
+            if (model.Image == null)
+            {
+                user.Image = user.Image;
+            }
+            else
+            {
+                user.Image = model.Image;
+            }
+
 
             user.UpdatedAt = DateTime.Now;
 

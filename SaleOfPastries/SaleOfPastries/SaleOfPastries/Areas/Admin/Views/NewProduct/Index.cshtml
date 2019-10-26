@@ -1,16 +1,17 @@
 ﻿@model IEnumerable<NewProduct>
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using X.PagedList.Mvc.Common;
 
 @{
     ViewBag.Title = "Index NewProduct";
 }
-
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
         <a asp-action="Index" asp-area="Admin" asp-controller="NewProduct">NewProduct</a>
     </li>
     <li class="breadcrumb-item active">Index</li>
 </ol>
-
 
 <div class="row">
     <div class="col-md-12">
@@ -34,8 +35,8 @@
                         <td scope="row">@Html.DisplayFor(modelItem => item.Title)</td>
                         <td scope="row">@Html.DisplayFor(modelItem => item.Context)</td>
                         <td scope="row">
-                            <img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(modelItem => item.Image)"/>
-                        </td> 
+                            <img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(modelItem => item.Image)" />
+                        </td>
                         <td scope="row">@Html.DisplayFor(modelItem => item.status)</td>
                         <td>
                             <a asp-action="Details" asp-route-id="@item.Id">Details</a>
@@ -46,5 +47,11 @@
                 }
             </tbody>
         </table>
+    </div>
+</div>
+<!--Phân trang -->
+<div class="row">
+    <div class="col-md-12">
+        @Html.PagedListPager((IPagedList)ViewBag.typeProducts, page => Url.Action("Index", "NewProduct", new { page = page }))
     </div>
 </div>

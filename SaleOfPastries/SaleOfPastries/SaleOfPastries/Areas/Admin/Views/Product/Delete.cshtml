@@ -1,12 +1,12 @@
-﻿@model TypeProduct
+﻿@model Product
 
 @{ 
-    ViewBag.Title = "Delete TypeProduct";
+    ViewBag.Title = "Delete Product";
 }
 
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a asp-action="Index" asp-area="Admin" asp-controller="TypeProduct">TypeProduct</a>
+        <a asp-action="Index" asp-area="Admin" asp-controller="Product">TypeProduct</a>
     </li>
     <li class="breadcrumb-item active">Delete</li>
 </ol>
@@ -23,8 +23,24 @@
                 <td scope="row">@Html.DisplayFor(model => model.Description)</td>
             </tr>
             <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.UnitPrice)</th>
+                <td scope="row">@Html.DisplayFor(model => model.UnitPrice)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.PromotionPrice)</th>
+                <td scope="row">@Html.DisplayFor(model => model.PromotionPrice)</td>
+            </tr>
+            <tr>
                 <th scope="col">@Html.DisplayNameFor(model => model.Image)</th>
                 <td scope="row"><img class="rounded d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(model => model.Image)" /></td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Unit)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Unit)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.New)</th>
+                <td scope="row">@Html.DisplayFor(model => model.New)</td>
             </tr>
             <tr>
                 <th scope="col">@Html.DisplayNameFor(model => model.status)</th>
@@ -35,7 +51,7 @@
 </div>
 <div class="row>
     <div class="col-md-12">
-        <form asp-action="Delete" asp-controller="TypeProduct" method="post">
+        <form asp-action="Delete" asp-controller="Product" method="post">
             <input type="hidden" asp-for="Id"/>
             <button type="submit" class="btn btn-primary offset-3">Delete</button>
             <button type="submit" class="btn btn-primary offset-3" asp-action="Index">Back</button>

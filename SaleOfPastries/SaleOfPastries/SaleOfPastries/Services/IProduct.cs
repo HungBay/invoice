@@ -11,5 +11,8 @@ namespace SaleOfPastries.Services
         IEnumerable<Product> GetProducts { get; }
         Product GetProduct(Guid? Id);
         IEnumerable<Product> GetProductByTypeProductId(Guid? Id);
+
+       
+        
     }
 }

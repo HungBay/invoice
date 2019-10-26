@@ -42,6 +42,7 @@ namespace SaleOfPastries.Areas.Admin.Reponsitory
             model.Address = customer.Address;
             model.Phone = customer.Phone;
             model.Note = customer.Note;
+            model.status = customer.status;
 
             model.UpdatedAt = DateTime.Now;
 

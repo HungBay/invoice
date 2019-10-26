@@ -5,23 +5,56 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SaleOfPastries.Areas.Admin.Serivice;
 using SaleOfPastries.Models;
+using SaleOfPastries.Repositories;
+using X.PagedList;
 
 namespace SaleOfPastries.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class UserController : Controller
     {
+        //private SaleOfPastriesDbContext db;
+
+        //public UserController(SaleOfPastriesDbContext _db)
+        //{
+        //    db = _db;
+        //}
         private readonly IUser _User;
 
         public UserController(IUser user)
         {
             _User = user;
         }
+        //[Route("user")]
+        //[Route("")]
+        //[Route("~/")]
+     
+        //public IActionResult Index()
+        //{
+        //    return View(_User.GetUsers);
+        //}
 
-        public IActionResult Index()
+       
+        public IActionResult Index(int? page)
         {
-            return View(_User.GetUsers);
+            int pageSize = 2;
+            var pageNumber = page ?? 1;
+            ViewBag.users = _User.GetUsers.ToList().ToPagedList(pageNumber, pageSize);
+            return View(ViewBag.users);
         }
+
+        //public IActionResult Index(User model)
+        //{
+        //    if (!string.IsNullOrEmpty(model.Text))
+        //    {
+        //        model.Text = _User.GetUsers.FullTe
+        //    }
+        //    else
+        //    {
+        //        model.Uses = _User.GetUsers;
+        //    }
+        //    return View(model);
+        //}
 
         [HttpGet]
         public IActionResult Details(Guid? Id)

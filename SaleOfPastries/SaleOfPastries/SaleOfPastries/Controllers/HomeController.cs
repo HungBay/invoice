@@ -21,12 +21,32 @@ namespace SaleOfPastries.Controllers
             _TypeProduct = typeProduct;
         }
 
-        public IActionResult Index()
-        {
-            ViewBag.TypeProducts = _TypeProduct.GetTypeProducts;
-            return View("Index", _Product.GetProducts);
-        }
         
+        //public IActionResult Index(int? Page)
+        //{
+        //    //header
+        //    ViewBag.TypeProducts = _TypeProduct.GetTypeProducts;
+
+        //    return View("Index", _Product.GetProducts);
+        //}
+        
+        public IActionResult Index(int? Page)
+        {
+            //header
+            ViewBag.TypeProducts = _TypeProduct.GetTypeProducts;
+            if(_Product.GetProductsPage(Page) == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var rowCount = _Product.GetProducts.Count();
+                var pageCount = (double)rowCount / 8;
+                ViewBag.PageCount = (int)Math.Ceiling(pageCount);
+                return View("Index", _Product.GetProductsPage(Page));
+            }
+            
+        }
         [HttpGet]
         public IActionResult Detail(Guid? Id)
         {

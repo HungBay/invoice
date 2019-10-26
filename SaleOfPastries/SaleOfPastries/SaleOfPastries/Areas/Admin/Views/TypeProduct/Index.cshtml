@@ -1,4 +1,7 @@
 ﻿@model IEnumerable<TypeProduct>
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using X.PagedList.Mvc.Common;
 
 @{ 
     ViewBag.Title = "Index TypeProduct";
@@ -45,5 +48,12 @@
                 }
             </tbody>
         </table>
+    </div>
+</div>
+
+<!--Phân trang -->
+<div class="row">
+    <div class="col-md-12">
+        @Html.PagedListPager((IPagedList)ViewBag.typeProducts, page => Url.Action("Index", "TypeProduct", new { page = page}))
     </div>
 </div>

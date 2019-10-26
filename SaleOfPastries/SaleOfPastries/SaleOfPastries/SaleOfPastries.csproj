@@ -29,35 +29,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="7.9.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Areas\Admin\Views\BillDetail\Index.cshtml" />
-    <None Include="Areas\Admin\Views\Bill\Create.cshtml" />
-    <None Include="Areas\Admin\Views\Bill\Delete.cshtml" />
-    <None Include="Areas\Admin\Views\Bill\Details.cshtml" />
-    <None Include="Areas\Admin\Views\Bill\Edit.cshtml" />
-    <None Include="Areas\Admin\Views\Bill\Index.cshtml" />
-    <None Include="Areas\Admin\Views\Customer\Create.cshtml" />
-    <None Include="Areas\Admin\Views\Customer\Delete.cshtml" />
-    <None Include="Areas\Admin\Views\Customer\Details.cshtml" />
-    <None Include="Areas\Admin\Views\Customer\Edit.cshtml" />
-    <None Include="Areas\Admin\Views\Customer\Index.cshtml" />
-    <None Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <None Include="Areas\Admin\Views\NewProduct\Create.cshtml" />
-    <None Include="Areas\Admin\Views\NewProduct\Delete.cshtml" />
-    <None Include="Areas\Admin\Views\NewProduct\Details.cshtml" />
-    <None Include="Areas\Admin\Views\NewProduct\Edit.cshtml" />
-    <None Include="Areas\Admin\Views\NewProduct\Index.cshtml" />
-    <None Include="Areas\Admin\Views\Product\Index.cshtml" />
-    <None Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <None Include="Areas\Admin\Views\TypeProduct\Create.cshtml" />
-    <None Include="Areas\Admin\Views\TypeProduct\Delete.cshtml" />
-    <None Include="Areas\Admin\Views\TypeProduct\Details.cshtml" />
-    <None Include="Areas\Admin\Views\TypeProduct\Edit.cshtml" />
-    <None Include="Areas\Admin\Views\TypeProduct\Index.cshtml" />
-    <None Include="Areas\Admin\Views\_ViewImports.cshtml" />
-    <None Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Folder Include="Areas\Admin\" />
   </ItemGroup>
 
 </Project>

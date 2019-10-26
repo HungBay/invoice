@@ -21,6 +21,14 @@ namespace SaleOfPastries.Controllers
         public IActionResult Index(Guid? Id)
         {
             ViewBag.TypeProducts = _TypeProduct.GetTypeProducts;
+            if(_Product.GetProduct(Id) != null)
+            {
+                // Related Products
+                var ProductId = _Product.GetProduct(Id).TypeProductId;
+                ViewBag.RelatedProducts = _Product.GetProductsRelated(ProductId);
+                //new Products
+                ViewBag.NewProducts = _Product.GetProductsNew(1);
+            }
             return View("Index", _Product.GetProduct(Id));
         }
     }

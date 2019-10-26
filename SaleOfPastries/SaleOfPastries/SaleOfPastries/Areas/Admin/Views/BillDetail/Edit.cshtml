@@ -1,0 +1,55 @@
+﻿@model BillDetail
+
+@{
+    ViewBag.Title = "Edit BillDetail";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a asp-action="Index" asp-area="Admin" asp-controller="BillDetail">BillDeta</a>
+    </li>
+    <li class="breadcrumb-item active">Create</li>
+</ol>
+
+<form asp-action="Edit" asp-controller="BillDetail" asp-area="Admin" method="post">
+    <div class="row">
+        <input type="hidden" asp-for="Id" />
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="BillId"></label>
+                @*<input type="text" class="form-control" asp-for="BillId" />*@,
+                <select asp-for="BillId" class="form-control"
+                        asp-items="@(new SelectList(ViewBag.Bills, "Id", "CustomerId"))"></select>
+                <span asp-validation-for="BillId" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductId"></label>
+                <select asp-for="ProductId" class="form-control"
+                        asp-items="@(new SelectList(ViewBag.Products, "Id", "Name"))"></select>
+                <span asp-validation-for="ProductId" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="status"></label>
+                <select asp-for="status" class="form-control">
+                    <option value="0">Acive</option>
+                    <option value="1">noAcive</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Quantity"></label>
+                <input type="text" class="form-control" asp-for="Quantity" />
+                <span asp-validation-for="Quantity" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnitPrice"></label>
+                <input type="text" class="form-control" asp-for="UnitPrice" />
+                <span asp-validation-for="UnitPrice" style="color: red;"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary offset-4">Edit</button>
+    </div>
+</form>

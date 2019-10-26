@@ -1,17 +1,20 @@
 ﻿@model Product
 
 @{
-    ViewBag.Title = "Create Product";
+    ViewBag.Title = "Edit Product";
 }
 
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
         <a asp-action="Index" asp-area="Admin" asp-controller="Product">Product</a>
     </li>
-    <li class="breadcrumb-item active">Create</li>
+    <li class="breadcrumb-item active">Edit</li>
 </ol>
 
-<form asp-action="Create" asp-controller="Product" asp-area="Admin" method="post">
+<form asp-action="Edit" asp-controller="Product" asp-area="Admin" method="post">
+    <div class="row">
+        <input type="hidden" asp-for="Id" />
+    </div>
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
@@ -35,6 +38,7 @@
                 <label asp-for="Image"></label>
                 <input type="file" class="form-control" asp-for="Image" />
                 @*<img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.ValueFor(model =>https://www.codeproject.com/ model.Image)" />*@
+                <img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(model => model.Image)" />
                 <span asp-validation-for="Image" style="color: red;"></span>
             </div>
         </div>
@@ -64,8 +68,8 @@
                     <option value="1">1</option>
                 </select>
                 <span asp-validation-for="New" style="color:red;"></span>
-            </div> 
-        </div> 
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -87,6 +91,6 @@
                 <span asp-validation-for="status" style="color:red;"></span>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary offset-3">Add</button>
+        <button type="submit" class="btn btn-primary offset-3">Edit</button>
     </div>
 </form>

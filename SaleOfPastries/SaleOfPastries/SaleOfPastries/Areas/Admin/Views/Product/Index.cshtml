@@ -1,16 +1,17 @@
 ﻿@model IEnumerable<Product>
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using X.PagedList.Mvc.Common;
 
-@{ 
+@{
     ViewBag.Title = "Index Product";
 }
-
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
         <a asp-action="Index" asp-area="Admin" asp-controller="Product">Product</a>
     </li>
     <li class="breadcrumb-item active">Index</li>
 </ol>
-
 <div class="row">
     <div class="col-md-12">
         <div class="col-md-6 p-0">
@@ -21,6 +22,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">@Html.DisplayNameFor(model => model.Name)</th>
+                    <th scope="col">TypeProduct</th>
                     <th scope="col">@Html.DisplayNameFor(model => model.Description)</th>
                     <th scope="col">@Html.DisplayNameFor(model => model.UnitPrice)</th>
                     <th scope="col">@Html.DisplayNameFor(model => model.PromotionPrice)</th>
@@ -36,27 +38,34 @@
                     int num = 1;
                     foreach (var item in Model)
                     {
-                    <tr>
-                        <td scope="row">@(num++)</td>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.Name)</td>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.Description)</td>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.UnitPrice)</td>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.PromotionPrice)</td>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.Unit)</td>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.New)</td>
-                        <td scope="row">
-                            <img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(modelItem => item.Image)" />
-                        </td>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.status)</td>
-                        <td>
-                            <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td scope="row">@(num++)</td>
+                            <td scope="row">@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td scope="row">@Html.DisplayFor(modelItem => item.TypeProduct.Name)</td>
+                            <td scope="row">@Html.DisplayFor(modelItem => item.Description)</td>
+                            <td scope="row">@Html.DisplayFor(modelItem => item.UnitPrice)</td>
+                            <td scope="row">@Html.DisplayFor(modelItem => item.PromotionPrice)</td>
+                            <td scope="row">@Html.DisplayFor(modelItem => item.Unit)</td>
+                            <td scope="row">@Html.DisplayFor(modelItem => item.New)</td>
+                            <td scope="row">
+                                <img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(modelItem => item.Image)" />
+                            </td>
+                            <td scope="row">@Html.DisplayFor(modelItem => item.status)</td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </tr>
                     }
                 }
             </tbody>
         </table>
+    </div>
+</div>
+<!--Phân trang -->
+<div class="row">
+    <div class="col-md-12">
+        @Html.PagedListPager((IPagedList)ViewBag.products, page => Url.Action("Index", "Product", new { page = page }))
     </div>
 </div>

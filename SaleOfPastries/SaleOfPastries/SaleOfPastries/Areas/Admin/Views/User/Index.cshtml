@@ -1,30 +1,34 @@
-﻿@model IEnumerable<Customer>
+﻿@model IEnumerable<User>
 @using X.PagedList.Mvc.Core;
 @using X.PagedList;
 @using X.PagedList.Mvc.Common;
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Index User";
 }
+
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="#">Customer</a>
+        <a asp-action="Index" asp-area="Admin" asp-controller="User">User</a>
     </li>
     <li class="breadcrumb-item active">Index</li>
 </ol>
+
+
 <div class="row">
     <div class="col-md-12">
         <div class="col-md-6 p-0">
-            <a class="btn btn-primary text-white mb-1" asp-action="Create" asp-area="Admin" asp-controller="Customer">Add +</a>
+            <a class="btn btn-primary text-white mb-1" asp-action="Create" asp-area="Admin" asp-controller="User">Add +</a>
         </div>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">@Html.DisplayNameFor(model => model.Name)</th>
-                    <th scope="col">@Html.DisplayNameFor(model => model.Gender)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.FullName)</th>
                     <th scope="col">@Html.DisplayNameFor(model => model.Email)</th>
-                    <th scope="col">@Html.DisplayNameFor(model => model.Address)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Password)</th>
                     <th scope="col">@Html.DisplayNameFor(model => model.Phone)</th>
-                    <th scope="col">@Html.DisplayNameFor(model => model.Note)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Address)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Image)</th>
                     <th scope="col">@Html.DisplayNameFor(model => model.status)</th>
                     <th class="text-center" colspan="2">Action</th>
                 </tr>
@@ -33,12 +37,14 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.Name)</td>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.Gender)</td>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.FullName)</td>
                         <td scope="row">@Html.DisplayFor(modelItem => item.Email)</td>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.Address)</td>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.Password)</td>
                         <td scope="row">@Html.DisplayFor(modelItem => item.Phone)</td>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.Note)</td>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.Address)</td>
+                        <td scope="row">
+                            <img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(modelItem => item.Image)"/>
+                        </td> 
                         <td scope="row">@Html.DisplayFor(modelItem => item.status)</td>
                         <td>
                             <a asp-action="Details" asp-route-id="@item.Id">Details</a>
@@ -48,12 +54,16 @@
                     </tr>
                 }
             </tbody>
+            @*<tr>
+                <td colspan="4" align="center">
+                    @Html.PagedListPager((IPagedList)ViewBag.users, page => Url.Action("Index", "User", new { page = page}))
+                </td>
+            </tr>*@
         </table>
     </div>
 </div>
-<!--Phân trang -->
 <div class="row">
     <div class="col-md-12">
-        @Html.PagedListPager((IPagedList)ViewBag.typeProducts, page => Url.Action("Index", "Customer", new { page = page }))
+        @Html.PagedListPager((IPagedList)ViewBag.users, page => Url.Action("Index", "User", new { page = page }))
     </div>
 </div>

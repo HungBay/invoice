@@ -1,22 +1,23 @@
 ﻿@model IEnumerable<Bill>
-
-@{ 
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@using X.PagedList.Mvc.Common;
+@{
     ViewBag.Title = "Index Bill";
 }
-
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
         <a href="#">Bill</a>
     </li>
     <li class="breadcrumb-item active">Index</li>
 </ol>
-
 <div class="row">
     <div class="col-md-12">
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">@Html.DisplayNameFor(model => model.CustomerId)</th>
+                    @*<th scope="col">@Html.DisplayNameFor(model => model.CustomerId)</th>*@
+                    <th scope="col">Name Customer</th>
                     <th scope="col">@Html.DisplayNameFor(model => model.DateOrder)</th>
                     <th scope="col">@Html.DisplayNameFor(model => model.Total)</th>
                     <th scope="col">@Html.DisplayNameFor(model => model.Note)</th>
@@ -25,10 +26,10 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach(var item in Model)
+                @foreach (var item in Model)
                 {
                     <tr>
-                        <td scope="row">@Html.DisplayFor(modelItem => item.CustomerId)</td>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.Customer.Name)</td>
                         <td scope="row">@Html.DisplayFor(modelItem => item.DateOrder)</td>
                         <td scope="row">@Html.DisplayFor(modelItem => item.Total)</td>
                         <td scope="row">@Html.DisplayFor(modelItem => item.Note)</td>
@@ -42,5 +43,11 @@
                 }
             </tbody>
         </table>
+    </div>
+</div>
+<!--Phân trang -->
+<div class="row">
+    <div class="col-md-12">
+        @Html.PagedListPager((IPagedList)ViewBag.bill, page => Url.Action("Index", "Bill", new { page = page }))
     </div>
 </div>

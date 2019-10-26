@@ -24,6 +24,7 @@ namespace SaleOfPastries.Controllers
             ViewBag.TypeProducts = _TypeProduct.GetTypeProducts;
 
             ViewBag.TypeProductsByIdProduct = _TypeProduct.GetTypeProduct(Id);
+
             ViewBag.Products = _Product.GetProductByTypeProductId(Id);
             return View("Index", _TypeProduct.GetTypeProducts);
         }

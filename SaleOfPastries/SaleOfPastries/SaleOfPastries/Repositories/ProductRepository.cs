@@ -29,5 +29,7 @@ namespace SaleOfPastries.Repositories
             var model = db.Products.Where(x => x.TypeProductId == Id).ToList();
             return model;
         }
+
+        
     }
 }

@@ -34,22 +34,35 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="Address"></label>
-                <input type="text" class="form-control" asp-for="Address"/>
+                <input type="text" class="form-control" asp-for="Address" />
                 <span asp-validation-for="Address" style="color:red;"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Phone"></label>
-                <input type="text" class="form-control" asp-for="Phone"/>
+                <input type="text" class="form-control" asp-for="Phone" />
                 <span asp-validation-for="Phone" style="color:red;"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="status"></label>
+                <select asp-for="status" class="form-control">
+                    <option value="0">Active</option>
+                    <option value="1">noActive</option>
+                </select>
+                <span asp-validation-for="status" style="color: red;"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="Note"></label>
                 <textarea class="form-control" rows="5" cols="5" asp-for="Note"></textarea>
                 <span asp-validation-for="Note" style="color:red;"></span>
             </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary offset-3">Add</button>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary offset-3">Add</button>
-
     </div>
 </form>
 <!-- Area Chart Example-->

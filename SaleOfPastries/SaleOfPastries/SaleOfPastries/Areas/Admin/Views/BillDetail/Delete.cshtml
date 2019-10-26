@@ -1,0 +1,45 @@
+﻿@model BillDetail
+@{
+    ViewBag.Title = "Delete BillDetail";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">BillDetail</a>
+    </li>
+    <li class="breadcrumb-item active">Delete</li>
+</ol>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.BillId)</th>
+                <td scope="row">@Html.DisplayFor(model => model.BillId)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.ProductId)</th>
+                <td scope="row">@Html.DisplayFor(model => model.ProductId)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Quantity)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Quantity)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.UnitPrice)</th>
+                <td scope="row">@Html.DisplayFor(model => model.UnitPrice)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.status)</th>
+                <td scope="row">@Html.DisplayFor(model => model.status)</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Delete" asp-controller="BillDetail" method="post">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-primary offset-3">Delete</button>
+            <button type="submit" class="btn btn-primary offset-3" asp-action="Index">Back</button>
+        </form>
+    </div>
+</div>
