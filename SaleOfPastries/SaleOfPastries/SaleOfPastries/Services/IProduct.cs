@@ -12,7 +12,7 @@ namespace SaleOfPastries.Services
         Product GetProduct(Guid? Id);
         IEnumerable<Product> GetProductByTypeProductId(Guid? Id);
 
-       
+        
         
     }
 }

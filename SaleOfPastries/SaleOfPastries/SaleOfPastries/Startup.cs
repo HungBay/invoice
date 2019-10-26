@@ -28,6 +28,7 @@ namespace SaleOfPastries
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSession();
             services.AddDbContext<SaleOfPastriesDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connect")));
             services.AddTransient<IUser, UserRepository>();
             services.AddTransient<ICustomer, CustomerRepository>();
@@ -54,6 +55,7 @@ namespace SaleOfPastries
             //{
             //    await context.Response.WriteAsync("Hello World!");
             //});
+            app.UseSession();
             app.UseFileServer();
             app.UseMvc(routes =>
             {
