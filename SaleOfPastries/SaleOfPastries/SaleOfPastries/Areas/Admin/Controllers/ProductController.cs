@@ -27,13 +27,27 @@ namespace SaleOfPastries.Areas.Admin.Controllers
 
         }
         // GET: /<controller>/
-        public IActionResult Index(int? page)
+        [HttpGet]
+        public IActionResult Index(int? page, string searchString)
         {
             //return View("Index", _product.GetProducts);
             int pageSize = 2;
             var pageNumber = page ?? 1;
-            ViewBag.products = _product.GetProducts.ToList().ToPagedList(pageNumber, pageSize);
-            return View(ViewBag.products);
+            if (searchString == null)
+            {
+                ViewBag.products = _product.GetProducts.ToList().ToPagedList(pageNumber, pageSize);
+                return View(ViewBag.products);
+            }
+            else
+            {
+                var model = from m in _product.GetProducts select m;
+                model = model.Where(s => s.Name.Contains(searchString));
+                ViewBag.productSearch = searchString;
+
+                ViewBag.products = model.ToList().ToPagedList(pageNumber, pageSize);
+                return View(ViewBag.products);
+            }
+
         }
 
         [HttpGet]

@@ -2,19 +2,33 @@
 @using X.PagedList.Mvc.Core;
 @using X.PagedList;
 @using X.PagedList.Mvc.Common;
-
 @{
     ViewBag.Title = "Index User";
 }
-
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
         <a asp-action="Index" asp-area="Admin" asp-controller="User">User</a>
     </li>
     <li class="breadcrumb-item active">Index</li>
 </ol>
-
-
+<!--Tim kiem-->
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Index" method="get" asp-controller="User" asp-area="Admin">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        Title: <input class="form-control" type="text" name="searchString" value="" />
+                    </div>
+                    <div class="col-md-6">
+                        <br />
+                        <input class="btn btn-primary offset-3" type="submit" value="Search" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 <div class="row">
     <div class="col-md-12">
         <div class="col-md-6 p-0">
@@ -43,8 +57,8 @@
                         <td scope="row">@Html.DisplayFor(modelItem => item.Phone)</td>
                         <td scope="row">@Html.DisplayFor(modelItem => item.Address)</td>
                         <td scope="row">
-                            <img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(modelItem => item.Image)"/>
-                        </td> 
+                            <img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(modelItem => item.Image)" />
+                        </td>
                         <td scope="row">@Html.DisplayFor(modelItem => item.status)</td>
                         <td>
                             <a asp-action="Details" asp-route-id="@item.Id">Details</a>
@@ -55,15 +69,16 @@
                 }
             </tbody>
             @*<tr>
-                <td colspan="4" align="center">
-                    @Html.PagedListPager((IPagedList)ViewBag.users, page => Url.Action("Index", "User", new { page = page}))
-                </td>
-            </tr>*@
+                    <td colspan="4" align="center">
+                        @Html.PagedListPager((IPagedList)ViewBag.users, page => Url.Action("Index", "User", new { page = page}))
+                    </td>
+                </tr>*@
         </table>
     </div>
 </div>
+<!--Phan trang-->
 <div class="row">
     <div class="col-md-12">
-        @Html.PagedListPager((IPagedList)ViewBag.users, page => Url.Action("Index", "User", new { page = page }))
+        @Html.PagedListPager((IPagedList)ViewBag.users, page => Url.Action("Index", "User", new { page = page, searchString = ViewBag.userSearch }))
     </div>
 </div>

@@ -17,22 +17,35 @@ namespace SaleOfPastries.Areas.Admin.Controllers
         private readonly IBillDetail _billDetail;
         private readonly IBill _bill;
         private readonly IProduct _product;
-
-        public BillDetailController(IBillDetail billDetail, IBill bill, IProduct product)
+        private readonly ICustomer _customer;
+        public BillDetailController(IBillDetail billDetail, IBill bill, IProduct product, ICustomer customer)
         {
             _billDetail = billDetail;
             _bill = bill;
             _product = product;
+            _customer = customer;
         }
-        // GET: /<controller>/
-        public IActionResult Index(int? page)
+        [HttpGet]
+        public IActionResult Index(int? page, string searchString)
         {
             //return View("Index", _billDetail.GetBillDetails);
             int pageSize = 2;
             var pageNumber = page ?? 1;
-            ViewBag.billDetail = _billDetail.GetBillDetails.ToList().ToPagedList(pageNumber, pageSize);
-            return View(ViewBag.billDetail);
+            if (searchString == null)
+            {
+                ViewBag.billDetail = _billDetail.GetBillDetails.ToList().ToPagedList(pageNumber, pageSize);
+                return View(ViewBag.billDetail);
+            }
+            else
+            {
+                //var model = from m in _billDetail.GetBillDetails select m;
+                //model = model.Where(s => s.Product.Name.Contains(searchString));
+                ViewBag.billDetailSearch = searchString;
+                ViewBag.billDetail = _billDetail.GetBillDetails.Where(s => s.Product.Name.Contains(searchString)).ToList().ToPagedList(pageNumber, pageSize);
+                return View(ViewBag.billDetail);
+            }
         }
+
 
         [HttpGet]
         public IActionResult Details(Guid? Id)

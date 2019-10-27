@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SaleOfPastries.Areas.Admin.Serivice;
 using SaleOfPastries.Models;
+using SaleOfPastries.Models.viewModel;
 using SaleOfPastries.Repositories;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace SaleOfPastries.Areas.Admin.Reponsitory
             db = _db;
         }
         public IEnumerable<BillDetail> GetBillDetails => db.BillDetails.Include(x => x.Bill).Include(y => y.Product);
+
 
         public void Add(BillDetail billDetail)
         {
@@ -53,5 +55,12 @@ namespace SaleOfPastries.Areas.Admin.Reponsitory
             BillDetail model = db.BillDetails.Find(Id);
             return model;
         }
+
+        //
+        //public IEnumerable<BillDetailView> GetBillDetailView(Guid? Id)
+        //{
+        //    var model = db.BillDetails.Where(s => s.BillId == Id).ToList();
+            
+        //}
     }
 }

@@ -20,6 +20,7 @@ namespace SaleOfPastries.Controllers
             db = _db;
             _TypeProduct = TypeProduct;
         }
+
         public IActionResult Index()
         {
             ViewBag.TypeProducts = _TypeProduct.GetTypeProducts;

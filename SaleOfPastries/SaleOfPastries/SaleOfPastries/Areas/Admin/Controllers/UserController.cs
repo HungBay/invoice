@@ -25,36 +25,28 @@ namespace SaleOfPastries.Areas.Admin.Controllers
         {
             _User = user;
         }
-        //[Route("user")]
-        //[Route("")]
-        //[Route("~/")]
-     
-        //public IActionResult Index()
-        //{
-        //    return View(_User.GetUsers);
-        //}
 
-       
-        public IActionResult Index(int? page)
+        [HttpGet]
+        public IActionResult Index(int? page, string searchString)
         {
             int pageSize = 2;
             var pageNumber = page ?? 1;
-            ViewBag.users = _User.GetUsers.ToList().ToPagedList(pageNumber, pageSize);
-            return View(ViewBag.users);
-        }
+            if (searchString == null)
+            {
+                ViewBag.users = _User.GetUsers.ToList().ToPagedList(pageNumber, pageSize);
+                return View(ViewBag.users);
+            }
+            else
+            {
+                var model = from m in _User.GetUsers select m;
+                model = model.Where(s => s.FullName.Contains(searchString));
+                ViewBag.userSearch = searchString;
 
-        //public IActionResult Index(User model)
-        //{
-        //    if (!string.IsNullOrEmpty(model.Text))
-        //    {
-        //        model.Text = _User.GetUsers.FullTe
-        //    }
-        //    else
-        //    {
-        //        model.Uses = _User.GetUsers;
-        //    }
-        //    return View(model);
-        //}
+                ViewBag.users = model.ToPagedList(pageNumber, pageSize);
+                return View(ViewBag.users);
+            }
+
+        }
 
         [HttpGet]
         public IActionResult Details(Guid? Id)

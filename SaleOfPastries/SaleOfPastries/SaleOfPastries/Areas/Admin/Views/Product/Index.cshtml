@@ -12,6 +12,24 @@
     </li>
     <li class="breadcrumb-item active">Index</li>
 </ol>
+<!--Tim kiem-->
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Index" method="get" asp-controller="Product" asp-area="Admin">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        Title: <input class="form-control" type="text" name="searchString" value="" />
+                    </div>
+                    <div class="col-md-6">
+                        <br />
+                        <input class="btn btn-primary offset-3" type="submit" value="Search" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 <div class="row">
     <div class="col-md-12">
         <div class="col-md-6 p-0">
@@ -66,6 +84,6 @@
 <!--Phân trang -->
 <div class="row">
     <div class="col-md-12">
-        @Html.PagedListPager((IPagedList)ViewBag.products, page => Url.Action("Index", "Product", new { page = page }))
+        @Html.PagedListPager((IPagedList)ViewBag.products, page => Url.Action("Index", "Product", new { page = page, searchString = ViewBag.productSearch }))
     </div>
 </div>
