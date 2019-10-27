@@ -72,14 +72,13 @@ namespace SaleOfPastries.Controllers
                     var rowCount = _Product.GetProductsSearch(s).Count();
                     var pageCount = (double)rowCount / 8;
                     ViewBag.PageCount = (int)Math.Ceiling(pageCount);
-                    ViewBag.Search = s;
+                    ViewBag.Search = s.Replace(" ", "+");
                     return View("Index", _Product.GetProductsPage(Page,s));
                 }
             }
 
             
         }
-
 
         [HttpGet]
         public IActionResult Detail(Guid? Id)
