@@ -1,0 +1,193 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/dest/css/font-awesome.min.css">
+    <link rel="stylesheet" title="style" href="~/assets/dest/css/bootstrap.min.css">
+    <link rel="stylesheet" title="style" href="~/assets/dest/css/style.css">
+    <link rel="stylesheet" title="style" href="~/assets/dest/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/nav-css.css">
+</head>
+<body>
+    <div class="header">
+
+        <div class="header-top">
+            <div class="container">
+                <div class="pull-left auto-width-left">
+                    <ul class="top-menu menu-beta l-inline">
+                        <li><a href=""><i class="fa fa-home"></i> Liên Hà - Đan Phượng - Hà Nội</a></li>
+                        <li><a href=""><i class="fa fa-phone"></i> 0349 179 935</a></li>
+                    </ul>
+                </div>
+                @*<div class="pull-right auto-width-right">
+                    <ul class="top-details menu-beta l-inline">
+                        <li><a href="#"><i class="fa fa-user"></i>Tài khoản</a></li>
+                        <li><a href="#">Đăng kí</a></li>
+                        <li><a href="#">Đăng nhập</a></li>
+                    </ul>
+                </div>*@
+                <div class="clearfix"></div>
+            </div> <!-- .container -->
+        </div> <!-- .header-top -->
+        <div class="header-body">
+            <div class="container beta-relative">
+                <div class="pull-left">
+                    <a href="index.html" id="logo"><img src="assets/dest/images/logo-cake.png" width="200" alt=""></a>
+                </div>
+                <div class="pull-right beta-components space-left ov">
+                    <div class="space10">&nbsp;</div>
+                    <div class="beta-comp">
+                        <form role="search" method="get" id="searchform" asp-action="Index" asp-controller="Home">
+                            <input type="text" name="s" id="s" placeholder="Nhập từ khóa..." onkeypress="Search()" />
+                            <button class="fa fa-search" type="submit" id="searchsubmit"></button>
+                        </form>
+
+                    </div>
+                    <div class="beta-comp">
+                        <div class="dropdown">
+                            <a class="btn dropdown-toggle rounded-0" style="border-color:#ccc;outline:none; box-shadow: none;" asp-action="Index" asp-controller="Cart">
+                                Giỏ hàng
+                            </a>
+                            @*<div class="dropdown-menu" style="margin-left: 0px; border-color:unset;" aria-labelledby="dropdownMenuButton">
+
+                                </div>*@
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div> <!-- .container -->
+        </div> <!-- .header-body -->
+        <!-- Nav -->
+        <div class="header-bottom">
+            <nav class="navbar navbar-expand-sm">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-action="Index" asp-controller="Home">Trang chủ <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sản phẩm
+                                <div class="animation"></div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @foreach (var item in ViewBag.TypeProducts)
+                                {
+                                    <a class="dropdown-item" asp-action="Index" asp-controller="TypeProduct" asp-route-id="@item.Id">
+                                        @item.Name
+                                        <div class="animation"></div>
+                                    </a>
+
+                                }
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div id="footer" class="color-div">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="widget">
+                        <h4 class="widget-title">Instagram Feed</h4>
+                        <div id="beta-instagram-feed"><div></div></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="widget">
+                        <h4 class="widget-title">Information</h4>
+                        <div>
+                            <ul>
+                                <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Web Design</a></li>
+                                <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Web development</a></li>
+                                <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Marketing</a></li>
+                                <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Tips</a></li>
+                                <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Resources</a></li>
+                                <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Illustrations</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-sm-10">
+                        <div class="widget">
+                            <h4 class="widget-title">Contact Us</h4>
+                            <div>
+                                <div class="contact-info">
+                                    <i class="fa fa-map-marker"></i>
+                                    <p>30 South Park Avenue San Francisco, CA 94108 Phone: +78 123 456 78</p>
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="widget">
+                        <h4 class="widget-title">Newsletter Subscribe</h4>
+                        <form action="#" method="post">
+                            <input type="email" name="your_email">
+                            <button class="pull-right" type="submit">Subscribe <i class="fa fa-chevron-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- #footer -->
+    <div class="copyright">
+        <div class="container">
+            <p class="pull-left">Privacy policy. (&copy;) 2014</p>
+            <p class="pull-right pay-options">
+                <a href="#"><img src="~/assets/dest/images/pay/master.jpg" alt="" /></a>
+                <a href="#"><img src="~/assets/dest/images/pay/pay.jpg" alt="" /></a>
+                <a href="#"><img src="~/assets/dest/images/pay/visa.jpg" alt="" /></a>
+                <a href="#"><img src="~/assets/dest/images/pay/paypal.jpg" alt="" /></a>
+            </p>
+            <div class="clearfix"></div>
+        </div> <!-- .container -->
+    </div> <!-- .copyright -->
+
+    <script src="~/jquery/jquery.min.js"></script>
+    <script src="~/assets/dest/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/assets/dest/js/popper.min.js"></script>
+    <script src="~/assets/dest/js/bootstrap.min.js"></script>
+    <script src='~/assets/dest/js/wow.min.js'></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        $(document).ready(function ($) {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $(".header-bottom").addClass('fixNav')
+                } else {
+                    $(".header-bottom").removeClass('fixNav')
+                }
+            }
+            )
+        });
+            //$(document).ready(function () {
+            //    $(".beta-select").click(function () {
+            //        $(".beta-dropdown").addClass("d-block");
+            //    });
+            //});
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

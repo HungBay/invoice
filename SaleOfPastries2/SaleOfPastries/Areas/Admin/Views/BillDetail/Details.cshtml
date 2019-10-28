@@ -1,0 +1,46 @@
+﻿@*@model BillDetail*@
+@model IEnumerable<BillDetailView>
+
+@{ 
+    ViewBag.Title = "Details BillDetail";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">BillDetail</a>
+    </li>
+    <li class="breadcrumb-item active">Details</li>
+</ol>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <tr>
+                <th class="col">@Html.DisplayNameFor(model => model.BillId)</th>
+                <th class="col">@Html.DisplayNameFor(model => model.NameCustomer)</th>
+                <th class="col">@Html.DisplayNameFor(model => model.NameProduct)</td>
+                <th class="col">@Html.DisplayNameFor(model => model.Quantity)</td>
+                <th class="col">@Html.DisplayNameFor(model => model.UnitPrice)</td>
+                <th class="col">@Html.DisplayNameFor(model => model.status)</td>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="col">@Html.DisplayFor(modelItem => item.BillId)</td>
+                        <td class="col">@Html.DisplayFor(modelItem => item.NameCustomer)</td>
+                        <td class="col">@Html.DisplayFor(modelItem => item.NameProduct)</td>
+                        <td class="col">@Html.DisplayFor(modelItem => item.Quantity)</td>
+                        <td class="col">@Html.DisplayFor(modelItem => item.UnitPrice)</td>
+                        <td class="col">@Html.DisplayFor(modelItem => item.status)</td>
+                    </tr>
+
+                }
+                <tr>
+                    <td scope="col">
+                        <form method="post" asp-action="Details" asp-controller="BillDetail">
+                            <a class="btn btn-info" asp-action="Index" asp-controller="BillDetail" asp-area="Admin" style="color:white;">Back</a>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+    </div>
+</div>

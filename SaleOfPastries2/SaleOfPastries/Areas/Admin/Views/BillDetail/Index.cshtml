@@ -1,0 +1,74 @@
+﻿@*@model IEnumerable<BillDetail>*@
+@model IEnumerable<BillDetailView>
+
+@{
+    ViewBag.Title = "Index BillDetail";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">BillDetail</a>
+    </li>
+    <li class="breadcrumb-item active">Index</li>
+</ol>
+<!--Tim kiem-->
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Index" method="get" asp-controller="BillDetail" asp-area="Admin">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        Title: <input class="form-control" type="text" name="searchString" value="" />
+                    </div>
+                    <div class="col-md-6">
+                        <br />
+                        <input class="btn btn-primary offset-3" type="submit" value="Search" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @*<div class="col-md-6 p-0">
+            <a class="btn btn-primary text-white mb-1" asp-action="Create" asp-area="Admin" asp-controller="BillDetail">Add +</a>
+        </div>*@
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">@Html.DisplayNameFor(model => model.BillId)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.NameCustomer)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.NameProduct)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.Quantity)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.UnitPrice)</th>
+                    <th scope="col">@Html.DisplayNameFor(model => model.status)</th>
+                    <th class="text-center" colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.BillId)</td>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.NameCustomer)</td>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.NameProduct)</td>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.Quantity)</td>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.UnitPrice)</td>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.status)</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.BillId">Details</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            @*<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--Phân trang -->
+<div class="row">
+    <div class="col-md-12">
+        @Html.PagedListPager((IPagedList)ViewBag.billDetail, page => Url.Action("Index", "BillDetail", new { page = page, searchString = ViewBag.billDetailSearch }))
+    </div>
+</div>

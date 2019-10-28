@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SaleOfPastries.Models.TypeProduct>
+
+<div class="container">
+    <div id="content" class="space-top-none">
+        <div class="main-content">
+            <div class="space60">&nbsp;</div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <ul class="aside-menu">
+                        @foreach (var item in Model)
+                        {
+                            <li><a asp-action="Index" asp-controller="TypeProduct" asp-route-id="@item.Id">@item.Name</a></li>
+                        }
+                    </ul>
+                </div>
+                <div class="col-sm-9">
+                    <div class="beta-products-list">
+                       
+                        <div class="beta-products-details">
+                            @*<p class="pull-left">438 styles found</p>*@
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="row">
+                            @foreach (var item in ViewBag.Products)
+                            {
+                                <div class="col-sm-4">
+                                    <div class="single-item">
+                                        @*<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>*@
+                                        <div class="single-item-header" id="single-item-header">
+                                            <a asp-action="Index" asp-controller="Product" asp-route-id="@item.Id"><img src="~/image/product/@item.Image" height="240" alt=""></a>
+                                            <div class="single-item-caption" id="single-item-caption">
+                                                <a class="add-to-cart pull-left wow fadeInDown" data-wow-delay="0.2s" asp-action="Buy" asp-controller="Cart" asp-route-id="@item.Id"><i class="fa fa-shopping-cart"></i></a>
+                                                <a class="detail-cart pull-left btn btn-white wow fadeInDown" data-wow-delay="0.2s" asp-action="Index" asp-controller="Product" asp-route-id="@item.Id">Details <i class="fa fa-chevron-right"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="single-item-body">
+                                            <p class="single-item-title">@item.Name</p>
+                                            <p class="single-item-price">
+                                                <span class="flash-del">@item.UnitPrice đ</span>
+
+                                                <span class="flash-sale">@item.PromotionPrice đ</span>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </div> <!-- .beta-products-list -->
+
+                </div> <!-- .beta-products-list -->
+            </div>
+        </div> <!-- end section with sidebar and main content -->
+    </div> <!-- .main-content -->
+</div> <!-- #content -->

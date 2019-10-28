@@ -1,0 +1,96 @@
+﻿@model Product
+
+@{
+    ViewBag.Title = "Edit Product";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a asp-action="Index" asp-area="Admin" asp-controller="Product">Product</a>
+    </li>
+    <li class="breadcrumb-item active">Edit</li>
+</ol>
+
+<form asp-action="Edit" asp-controller="Product" asp-area="Admin" method="post">
+    <div class="row">
+        <input type="hidden" asp-for="Id" />
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input type="text" class="form-control" asp-for="Name" />
+                <span asp-validation-for="Name" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypeProductId"></label>
+                <select asp-for="TypeProductId" class="form-control"
+                        asp-items="@(new SelectList(ViewBag.TypeProducts,"Id","Name"))"></select>
+                <span asp-validation-for="TypeProductId" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewId"></label>
+                <select asp-for="NewId" class="form-control"
+                        asp-items="@(new SelectList(ViewBag.NewProducts,"Id","Title"))"></select>
+                <span asp-validation-for="TypeProductId" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image"></label>
+                <input type="file" class="form-control" asp-for="Image" />
+                @*<img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.ValueFor(model =>https://www.codeproject.com/ model.Image)" />*@
+                <img class="rounded mx-auto d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(model => model.Image)" />
+                <span asp-validation-for="Image" style="color: red;"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Unit"></label>
+                <select asp-for="Unit" class="form-control">
+                    <option value="hộp">hộp</option>
+                    <option value="cái">cái</option>
+                </select>
+                <span asp-validation-for="Unit" style="color:red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnitPrice"></label>
+                <input type="text" class="form-control" asp-for="UnitPrice" />
+                <span asp-validation-for="UnitPrice" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PromotionPrice"></label>
+                <input type="text" class="form-control" asp-for="PromotionPrice" />
+                <span asp-validation-for="PromotionPrice" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="New"></label>
+                <select asp-for="New" class="form-control">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+                <span asp-validation-for="New" style="color:red;"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Description" style="color:red;"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="status"></label>
+                <select asp-for="status" class="form-control">
+                    <option value="0">Acive</option>
+                    <option value="1">nonAcive</option>
+                </select>
+                <span asp-validation-for="status" style="color:red;"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary offset-3">Edit</button>
+    </div>
+</form>

@@ -1,0 +1,58 @@
+﻿@model Product
+
+@{ 
+    ViewBag.Title = "Details Product";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">Product</a>
+    </li>
+    <li class="breadcrumb-item active">Details</li>
+</ol>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Name)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Name)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Description)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Description)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.UnitPrice)</th>
+                <td scope="row">@Html.DisplayFor(model => model.UnitPrice)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.PromotionPrice)</th>
+                <td scope="row">@Html.DisplayFor(model => model.PromotionPrice)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Image)</th>
+                <td scope="row"><img class="rounded d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(model => model.Image)" /></td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Unit)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Unit)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.New)</th>
+                <td scope="row">@Html.DisplayFor(model => model.New)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.status)</th>
+                <td scope="row">@Html.DisplayFor(model => model.status)</td>
+            </tr>
+            <tr>
+                <td scope="col">
+                    <form method="post" asp-action="Details" asp-controller="Product">
+                        <a class="btn btn-info" asp-action="Index" asp-controller="Product" asp-area="Admin" style="color:white;">Back</a>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+﻿
+
+<div class="container">
+    <div id="content">
+
+        <div class="table-responsive">
+            <!-- Shop Products Table -->
+            <table class="shop_table beta-shopping-cart-table" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="product-name">Product</th>
+                        <th >Name</th>
+                        <th class="product-price">Price</th>
+                        <th class="product-quantity">Qty.</th>
+                        <th class="product-subtotal">Total</th>
+                        <th class="product-remove">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.cart)
+                    {
+                        <tr class="cart_item">
+                            <td class="product-name">
+                                <div class="media">
+                                    <a asp-action="Index" asp-controller="Product" asp-route-id="@item.Product.Id"><img class="pull-left" src="~/image/product/@item.Product.Image" alt=""></a>
+                                    <div class="media-body">
+                                        
+                                    </div>
+                                </div>
+                            </td>
+                            <td><p class="font-large table-title">@item.Product.Name</p></td>
+                            <td class="product-price">
+                                <span class="amount">@item.Product.UnitPrice</span>
+                            </td>
+
+                            <td class="product-quantity">
+                                @*<select name="product-qty" id="product-qty">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>*@
+                                @item.Quantity
+                            </td>
+
+                            <td class="product-subtotal">
+                                <span class="amount">@(item.Product.UnitPrice * item.Quantity)</span>
+                            </td>
+
+                            <td class="product-remove">
+                                <a asp-controller="cart" asp-action="remove" asp-route-id="@item.Product.Id" class="remove" title="Remove this item"><i class="fa fa-trash-o"></i></a>
+                            </td>
+                        </tr>
+                    }
+                    <tr>
+                        <td align="right" colspan="4">Sum</td>
+                        <td colspan="2">
+                            @ViewBag.total đ
+                        </td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="6" class="actions">
+                            <a asp-action="Index" asp-controller="CheckOut" class="btn btn-primary float-md-right ml-2">CheckOut</a>
+                            <a asp-action="Index" asp-controller="Home" class="btn btn-primary float-md-right">Back to home</a>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <!-- End of Shop Table Products -->
+        </div>
+
+
+        <!-- Cart Collaterals -->
+        
+        <!-- End of Cart Collaterals -->
+        <div class="clearfix"></div>
+
+    </div> <!-- #content -->
+</div> <!-- .container -->

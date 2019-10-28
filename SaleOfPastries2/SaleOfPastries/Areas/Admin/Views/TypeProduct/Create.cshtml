@@ -1,0 +1,47 @@
+﻿@model TypeProduct
+
+@{ 
+    ViewBag.Title = "Create TypeProduct";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a asp-action="Index" asp-area="Admin" asp-controller="TypeProduct">TypeProduct</a>
+    </li>
+    <li class="breadcrumb-item active">Create</li>
+</ol>
+
+<form asp-action="Create" asp-controller="TypeProduct" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input type="text" class="form-control" asp-for="Name" />
+                <span asp-validation-for="Name" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image"></label>
+                <input type="file" class="form-control" asp-for="Image" />
+                @*<img class="rounded d-block" width="200" height="200" src="~/image/product/@Html.DisplayFor(model => model.Image)" />*@
+                <span asp-validation-for="Image" style="color:red;"></span>
+            </div>
+            
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="status"></label>
+                <select asp-for="status" class="form-control">
+                    <option value="0">Acive</option>
+                    <option value="1">nonAcive</option>
+                </select>
+                <span asp-validation-for="status" style="color:red;"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Description" style="color:red;"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary offset-3">Add</button>
+    </div>
+</form>

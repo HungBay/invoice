@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/lib/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-6 card card-login mx-auto mt-5">
+            <div class="card-header">Login</div>
+            <div class="card-body">
+                <form method="post" asp-controller="account" asp-action="login">
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="text" class="form-control" name="username" placeholder="Username" required="required" autofocus="autofocus">
+                            <label>Username</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="required">
+                            <label for="inputPassword">Password</label>
+                        </div>
+                    </div>
+                    <input class="btn btn-primary btn-block" type="submit" value="Login">
+                </form>
+                <div class="text-center">
+                    <p class="text-danger">@ViewBag.error</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

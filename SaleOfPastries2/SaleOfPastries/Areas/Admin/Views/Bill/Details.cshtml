@@ -1,0 +1,46 @@
+﻿@model Bill
+
+@{ 
+    ViewBag.Title = "Details Bill";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">Bill</a>
+    </li>
+    <li class="breadcrumb-item active">Details</li>
+</ol>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.CustomerId)</th>
+                <td scope="row">@Html.DisplayFor(model => model.CustomerId)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.DateOrder)</th>
+                <td scope="row">@Html.DisplayFor(model => model.DateOrder)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Total)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Total)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Note)</th>
+                <td scope="row">@Html.DisplayFor(model => model.Note)</td>
+            </tr>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.status)</th>
+                <td scope="row">@Html.DisplayFor(model => model.status)</td>
+            </tr>
+            <tr>
+                <td scope="col">
+                    <form method="post" asp-action="Details" asp-controller="Bill">
+                        <a class="btn btn-info" asp-action="Index" asp-controller="Bill" asp-area="Admin" style="color:white;">Back</a>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
